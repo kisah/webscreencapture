@@ -1,0 +1,9 @@
+<html>
+  <video id="vid" autoplay></video>
+  <script>
+    navigator.getUserMedia( { audio:false, video: { mandatory: { chromeMediaSource:'screen' }, optional: [] }}, function(stream) {
+      document.getElementById("vid").src = URL.createObjectURL(stream);
+    },
+    function(err) {});
+  </script>
+</html>
