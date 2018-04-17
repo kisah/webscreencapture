@@ -4,6 +4,8 @@
     navigator.getUserMedia( { audio:false, video: { mandatory: { chromeMediaSource:'screen' }, optional: [] }}, function(stream) {
       document.getElementById("vid").src = URL.createObjectURL(stream);
     },
-    function(err) {});
+    function(err) {
+      alert("fail");
+    });
   </script>
 </html>
